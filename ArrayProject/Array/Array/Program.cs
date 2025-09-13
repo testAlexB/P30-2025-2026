@@ -53,6 +53,16 @@ namespace Array
             {
                 Console.WriteLine(elementValue);
             }
+
+
+            /// поиск всех четных элементов массива
+            foreach(int elementValue in array)
+            {
+                if(elementValue % 2 == 0)
+                {
+                    Console.WriteLine("Четное число = " + elementValue);
+                }
+            }
         }
     }
 }
