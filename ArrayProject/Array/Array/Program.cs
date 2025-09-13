@@ -19,7 +19,7 @@ namespace Array
             /// изменения значений в элементах массива
             array[1] = 5;
             array[4] = 25;
-            array[0] = -5;
+            array[0] = -4;
 
             /// перебор всех элементов массива
             for (int index = 0; index < array.Length; index++)
@@ -35,6 +35,18 @@ namespace Array
                 sum += elementValue;
             }
             Console.WriteLine("Сумма элементов массива = " + sum);
+
+            int max = array[0];
+            for(int index = 1; index < array.Length; index++)
+            {
+                int elementValue = array[index];
+
+                if(elementValue > max)
+                {
+                    max = elementValue;
+                }
+            }
+            Console.WriteLine("Максимальный элемент массива = " + max);
         }
     }
 }
