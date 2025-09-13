@@ -47,6 +47,12 @@ namespace Array
                 }
             }
             Console.WriteLine("Максимальный элемент массива = " + max);
+
+            /// перебор элементов массива, используя конструкцию foreach
+            foreach(int elementValue in array)
+            {
+                Console.WriteLine(elementValue);
+            }
         }
     }
 }
