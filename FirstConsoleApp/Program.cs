@@ -7,6 +7,7 @@ namespace FirstConsoleApp
         static void Main()
         {
             Console.WriteLine("Hello");
+            Console.WriteLine("Day end!!!");
         }
     }
 }
