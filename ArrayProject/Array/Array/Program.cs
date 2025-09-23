@@ -37,11 +37,11 @@ namespace Array
             Console.WriteLine("Сумма элементов массива = " + sum);
 
             int max = array[0];
-            for(int index = 1; index < array.Length; index++)
+            for (int index = 1; index < array.Length; index++)
             {
                 int elementValue = array[index];
 
-                if(elementValue > max)
+                if (elementValue > max)
                 {
                     max = elementValue;
                 }
@@ -49,19 +49,58 @@ namespace Array
             Console.WriteLine("Максимальный элемент массива = " + max);
 
             /// перебор элементов массива, используя конструкцию foreach
-            foreach(int elementValue in array)
+            foreach (int elementValue in array)
             {
                 Console.WriteLine(elementValue);
             }
 
 
             /// поиск всех четных элементов массива
-            foreach(int elementValue in array)
+            foreach (int elementValue in array)
             {
-                if(elementValue % 2 == 0)
+                if (elementValue % 2 == 0)
                 {
                     Console.WriteLine("Четное число = " + elementValue);
                 }
+            }
+
+            /// spisok
+            /// vibor
+            /// Q
+            /// camelCase
+            /// CamelCase
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            int[] numbers = new int[99];
+            for (int index = 0; index < numbers.Length; index++)
+            {
+                numbers[index] = index * 2;
+            }
+            Console.Write("Array init: ");
+            foreach (int elementValue in numbers)
+            {
+                Console.Write(elementValue + " ");
+            }
+
+            /// tmp = a;
+            /// a = b;
+            /// b = tmp;
+
+            for (int step = 0; step < numbers.Length / 2; ++step)
+            {
+                int temp = numbers[step]; /// a -> numbers[step]
+                numbers[step] = numbers[numbers.Length - step - 1]; /// b -> numbers[numbers.Length - step - 1]
+                numbers[numbers.Length - step - 1] = temp;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("Array reverse: ");
+            foreach(int elementValue in numbers)
+            {
+                Console.Write(elementValue + " ");
             }
         }
     }
