@@ -11,7 +11,7 @@ namespace LRProject
             Console.Write("Число элементов массива = ");
             n = Convert.ToInt32(Console.ReadLine());
 
-
+            int[] array = new int[n];
         }
     }
 }
