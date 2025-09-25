@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LRProject
 {
@@ -6,38 +7,35 @@ namespace LRProject
     {
         static void Main()
         {
-            int n = 0;
-
-            Console.Write("Число элементов массива = ");
-            n = Convert.ToInt32(Console.ReadLine());
-
-            int[] array = new int[n];
-
-            for(int index = 0; index < array.Length; ++index)
+            int[] array = new int[1990];
+            int a = 10;
+            for(int i = 0; i < array.Length; ++i)
             {
-                Console.Write($"Элемент[{index}] = ");
-                array[index] = Convert.ToInt32(Console.ReadLine());
+                array[i] = a;
+                ++a;
             }
 
-            double avg = 0.0;
-            int sum = 0;
+            List<int> result = new List<int>();
             foreach(int element in array)
             {
-                sum += element;
-            }
-            avg = sum / array.Length;
-
-            int count = 0;
-
-            foreach(int element in array)
-            {
-                if (element < avg)
+                int countD = 0;
+                for(int d = 2; d < element; ++d)
                 {
-                    ++count;
+                    /// делится ли число нацело на d
+                    if(element % d == 0)
+                    {
+                        ++countD;
+                        break;
+                    }
+                }
+
+                /// если делителей нет
+                if(countD == 0)
+                {
+                    /// то число простое
+                    result.Add(element);
                 }
             }
-
-            Console.WriteLine("Число элементов = " + count);
         }
     }
 }
