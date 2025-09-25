@@ -27,6 +27,17 @@ namespace LRProject
             }
             avg = sum / array.Length;
 
+            int count = 0;
+
+            foreach(int element in array)
+            {
+                if (element < avg)
+                {
+                    ++count;
+                }
+            }
+
+            Console.WriteLine("Число элементов = " + count);
         }
     }
 }
