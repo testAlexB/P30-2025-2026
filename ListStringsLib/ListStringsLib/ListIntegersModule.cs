@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ListStringsLib
 {
@@ -6,7 +7,8 @@ namespace ListStringsLib
     {
         static public void PrintNumbers(List<int> numbers)
         {
-
+            string output = string.Join(", ", numbers);
+            Console.WriteLine(output);
         }
     }
 }
