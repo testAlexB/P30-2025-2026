@@ -45,6 +45,25 @@ else
             }
         }
 
+        static void InsertionSort(List<int> data, bool isAscending)
+        {
+            for (int i = 1; i < data.Count; i++)
+            {
+                int k = data[i];
+                int j = i - 1;
+
+                
+
+                while (j >= 0 && (isAscending ? data[j] > k 
+                                              : data[j] < k))
+                {
+                    data[j + 1] = data[j];
+                    data[j] = k;
+                    j--;
+                }
+            }
+        }
+
         static string Print(List<int> d)
         {
             return ("[" + string.Join(", ", d) + "]");
@@ -61,6 +80,14 @@ else
 
             BubbleSortList(data, false);
             Console.WriteLine("after sort DESC: " + Print(data));
+
+            List<int> list2 = new List<int>() { -100, 2, 0, -5, 5, 5 };
+            Console.WriteLine("init list2: " + Print(list2));
+            InsertionSort(list2, true);
+            Console.WriteLine("after InsertionSort ASC: " + Print(list2));
+
+            InsertionSort(list2, false);
+            Console.WriteLine("after InsertionSort DESC: " + Print(list2));
         }
     }
 }
