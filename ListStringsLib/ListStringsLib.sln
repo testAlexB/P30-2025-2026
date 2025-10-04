@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListStringsLib", "ListStringsLib\ListStringsLib.csproj", "{7A7832DC-CBD6-4E9F-B8C0-7ACEA45C5A95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingList", "..\SortingList\SortingList.csproj", "{91833285-C15D-4F38-8DCE-C7E7C2E7C41F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7A7832DC-CBD6-4E9F-B8C0-7ACEA45C5A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A7832DC-CBD6-4E9F-B8C0-7ACEA45C5A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A7832DC-CBD6-4E9F-B8C0-7ACEA45C5A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91833285-C15D-4F38-8DCE-C7E7C2E7C41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91833285-C15D-4F38-8DCE-C7E7C2E7C41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91833285-C15D-4F38-8DCE-C7E7C2E7C41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91833285-C15D-4F38-8DCE-C7E7C2E7C41F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
