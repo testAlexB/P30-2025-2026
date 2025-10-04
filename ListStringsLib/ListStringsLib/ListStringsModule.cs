@@ -20,5 +20,23 @@ namespace ListStringsLib
 
             return result;
         }
+
+        static public List<int> FindIndexesWithContainsText(string text,
+                                                            List<string> sourceData)
+        {
+            List<int> result = new List<int>();
+
+            for(int index = 0; index < sourceData.Count; ++index)
+            {
+                string elementValue = sourceData[index];
+
+                if(elementValue.Contains(text))
+                {
+                    result.Add(index + 1);
+                }
+            }
+
+            return result;
+        }
     }
 }
