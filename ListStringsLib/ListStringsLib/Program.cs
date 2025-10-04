@@ -7,6 +7,8 @@ namespace ListStringsLib
         static private void Main()
         {
            List<string> listStrings =  ListStringsModule.InputListStrings();
+
+           List<int> numbers = ListStringsModule.FindIndexesWithContainsText("abc", listStrings);
         }
     }
 }
