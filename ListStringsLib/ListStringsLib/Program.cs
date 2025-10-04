@@ -9,6 +9,8 @@ namespace ListStringsLib
            List<string> listStrings =  ListStringsModule.InputListStrings();
 
            List<int> numbers = ListStringsModule.FindIndexesWithContainsText("abc", listStrings);
+
+           ListIntegersModule.PrintNumbers(numbers);
         }
     }
 }
