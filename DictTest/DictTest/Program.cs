@@ -62,7 +62,7 @@ namespace DictTest
         }
 
         return Genre.Unknown;
-    }
+        }
 
         static void Main()
         {
@@ -88,7 +88,7 @@ namespace DictTest
             string text = Console.ReadLine();
             Genre genre = MakeGenreByText(text);
 
-            if(genre == Genre.Unknown)
+            if (genre == Genre.Unknown)
             {
                 Console.WriteLine("Ай я-яй, нужна либо драма, либо трагедия, либо комедия");
                 return;
@@ -101,6 +101,8 @@ namespace DictTest
             RemoveBook(catalogBooks, book);
             Console.WriteLine("Набор книг после удаления");
             PrintBooksByGenre(genre, catalogBooks);
+
+            /// Д.З. Реализовать функции добавления книг и редактирования их названий
         }
     }
 }
