@@ -15,10 +15,33 @@ namespace DictTest
     class Program
     {
 
-    static private void RemoveBook(Dictionary<Genre, List<string>> allBooks,
+    static public void RemoveBook(Dictionary<Genre, List<string>> allBooks,
                                    string bookName)
     {
+        foreach(List<string> books in allBooks.Values)
+        {
+            for(int index = 0; index < books.Count; ++index)
+            {
+                    if (books[index] == bookName)
+                    {
+                        books.RemoveAt(index);
+                        --index;
+                    }
+            }
+        }
+    }
 
+    static void PrintBooksByGenre(Genre genre, Dictionary<Genre, List<string>> allBooks)
+    {
+            if (allBooks.ContainsKey(genre))
+            {
+                List<string> books = allBooks[genre];
+                Console.WriteLine(String.Join("\n", books));
+            }
+            else
+            {
+                Console.WriteLine("Книг данного жанра мы еще не завезли");
+            }
     }
 
     static private Genre MakeGenreByText(string text)
@@ -71,16 +94,13 @@ namespace DictTest
                 return;
             }
 
-            if(catalogBooks.ContainsKey(genre))
-            {
-                List<string> books = catalogBooks[genre];
-                Console.WriteLine(String.Join("\n", books));
-            }
-            else
-            {
-                Console.WriteLine("Книг данного жанра мы еще не завезли");
-            }
+            PrintBooksByGenre(genre, catalogBooks);
 
+            Console.Write("Какую книгу хотите удалить?");
+            string book = Console.ReadLine();
+            RemoveBook(catalogBooks, book);
+            Console.WriteLine("Набор книг после удаления");
+            PrintBooksByGenre(genre, catalogBooks);
         }
     }
 }
