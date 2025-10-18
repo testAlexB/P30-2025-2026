@@ -15,6 +15,12 @@ namespace DictTest
     class Program
     {
 
+    static private void RemoveBook(Dictionary<Genre, List<string>> allBooks,
+                                   string bookName)
+    {
+
+    }
+
     static private Genre MakeGenreByText(string text)
     {
         if (text == "драма")
