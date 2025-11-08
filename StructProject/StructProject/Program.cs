@@ -19,13 +19,7 @@ namespace StructProject
             Console.WriteLine($"{beginVector.Name}:({beginVector.X}, {beginVector.Y})" +
                               $" | {endVector.Name}:({endVector.X}, {endVector.Y})");
 
-            int diffX = (int)Math.Pow(endVector.X - beginVector.X, 2);
-            int diffY = (int)Math.Pow(endVector.Y - beginVector.Y, 2);
-
-            int diff = diffX + diffY;
-
-            double lenVector = Math.Sqrt(diff);
-            Console.WriteLine("Длина вектора = " + lenVector);
+            Console.WriteLine("Длина вектора = " + Point.CalcLenVector(beginVector, endVector));
         }
     }
 }
