@@ -26,7 +26,7 @@ namespace StructProject
             vector.begin = beginVector;
             vector.end = endVector;
 
-            Vector[] allVectors = new Vector[10000]; /// массив из 10'000 векторов
+            Vector[] allVectors = new Vector[10]; /// массив из 10 векторов
             Random random = new Random();
             for (int i = 0; i < allVectors.Length; i++)
             {
@@ -39,7 +39,15 @@ namespace StructProject
                 v.end.Name = "Конец вектора " + i;
 
                 allVectors[i] = v; /// положим (разместим) вектор в соответствующей ячейке массива
+
+                Console.WriteLine($"{v.begin.Name}:({v.begin.X}, {v.begin.Y})" +
+                  $" | {v.end.Name}:({v.end.X}, {v.end.Y})");
+
+                Thread.Sleep(2000);
             }
+
+            Console.WriteLine("Длина 5 вектора = " 
+                + Point.CalcLenVector(allVectors[4].begin, allVectors[4].end));
 
         }
     }
