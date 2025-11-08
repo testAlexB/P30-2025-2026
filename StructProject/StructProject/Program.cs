@@ -1,4 +1,6 @@
-﻿namespace StructProject
+﻿using System;
+
+namespace StructProject
 {
     class Program
     {
@@ -13,6 +15,9 @@
             endVector.X = 10;
             endVector.Y = -5;
             endVector.Name = "Конец вектора";
+
+            Console.WriteLine($"{beginVector.Name}:({beginVector.X}, {beginVector.Y})" +
+                              $" | {endVector.Name}:({endVector.X}, {endVector.Y})");
         }
     }
 }
