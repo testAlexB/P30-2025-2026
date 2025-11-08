@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace StructProject
 {
@@ -20,6 +21,26 @@ namespace StructProject
                               $" | {endVector.Name}:({endVector.X}, {endVector.Y})");
 
             Console.WriteLine("Длина вектора = " + Point.CalcLenVector(beginVector, endVector));
+
+            Vector vector = new Vector();
+            vector.begin = beginVector;
+            vector.end = endVector;
+
+            Vector[] allVectors = new Vector[10000]; /// массив из 10'000 векторов
+            Random random = new Random();
+            for (int i = 0; i < allVectors.Length; i++)
+            {
+                Vector v = new Vector(); /// по умолчанию будем создавать нулевой вектор
+                v.begin.X = random.Next(-50, 51);
+                v.begin.Y = random.Next(-50, 51);
+                v.end.X = random.Next(-50, 51);
+                v.end.Y = random.Next(-50, 51);
+                v.begin.Name = "Начало вектора " + i;
+                v.end.Name = "Конец вектора " + i;
+
+                allVectors[i] = v; /// положим (разместим) вектор в соответствующей ячейке массива
+            }
+
         }
     }
 }
