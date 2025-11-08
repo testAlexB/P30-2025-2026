@@ -8,6 +8,11 @@
             beginVector.X = -10;
             beginVector.Y = 5;
             beginVector.Name = "Начало вектора";
+
+            Point endVector = new Point();
+            endVector.X = 10;
+            endVector.Y = -5;
+            endVector.Name = "Конец вектора";
         }
     }
 }
