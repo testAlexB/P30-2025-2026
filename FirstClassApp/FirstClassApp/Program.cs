@@ -6,7 +6,9 @@ namespace FirstClassApp
     {
         static void Main()
         {
-            Console.WriteLine("123");
+            HomoSapiens dima = new HomoSapiens(); /// первый человек разумный в системе, идентифицируется как dima
+            dima.SetName("Дима Новорожденный");
+            Console.WriteLine(dima.GetName());
         }
     }
 }
