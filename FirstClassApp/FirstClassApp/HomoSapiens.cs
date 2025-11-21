@@ -1,4 +1,6 @@
-﻿namespace FirstClassApp
+﻿using System.ComponentModel;
+
+namespace FirstClassApp
 {
     public class HomoSapiens
     {
@@ -14,6 +16,16 @@
         public void SetName(string name)
         {
             name_ = name;
+        }
+
+        public void SetAge(int age)
+        {
+            age_ = age;
+        }
+
+        public int GetAge()
+        {
+            return age_;
         }
     }
 }
