@@ -40,12 +40,6 @@ namespace LiveChartsTest
                 )
             };
 
-            lineSeries.Title = "Динамика продаж";
-            cartesian.LegendLocation = LegendLocation.Top;
-            cartesian.DefaultLegend.FontFamily = new System.Windows.Media.FontFamily("Segoe UI");
-            cartesian.DefaultLegend.FontSize = 24;
-            cartesian.DefaultLegend.FontWeight = FontWeights.SemiBold;
-
             cartesian.Series = new SeriesCollection { lineSeries };
 
             // 🔹 Ось Y

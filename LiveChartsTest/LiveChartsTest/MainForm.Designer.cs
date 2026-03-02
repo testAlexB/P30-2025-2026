@@ -28,27 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cartesian = new LiveCharts.WinForms.CartesianChart();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.angular = new LiveCharts.WinForms.AngularGauge();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.solid = new LiveCharts.WinForms.SolidGauge();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cartesian = new LiveCharts.WinForms.CartesianChart();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cartesian
-            // 
-            this.cartesian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesian.Location = new System.Drawing.Point(3, 3);
-            this.cartesian.Name = "cartesian";
-            this.cartesian.Size = new System.Drawing.Size(786, 418);
-            this.cartesian.TabIndex = 0;
-            this.cartesian.Text = "Cartesian";
             // 
             // tabControl1
             // 
@@ -64,7 +60,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cartesian);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -112,6 +109,44 @@
             this.solid.TabIndex = 0;
             this.solid.Text = "solidGauge1";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(786, 40);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cartesian);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 378);
+            this.panel2.TabIndex = 1;
+            // 
+            // cartesian
+            // 
+            this.cartesian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesian.Location = new System.Drawing.Point(0, 0);
+            this.cartesian.Name = "cartesian";
+            this.cartesian.Size = new System.Drawing.Size(786, 378);
+            this.cartesian.TabIndex = 0;
+            this.cartesian.Text = "cartesianChart1";
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(786, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Динамика продаж";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,19 +159,23 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private LiveCharts.WinForms.CartesianChart cartesian;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private LiveCharts.WinForms.AngularGauge angular;
         private System.Windows.Forms.TabPage tabPage3;
         private LiveCharts.WinForms.SolidGauge solid;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private LiveCharts.WinForms.CartesianChart cartesian;
+        private System.Windows.Forms.Label label1;
     }
 }
 
